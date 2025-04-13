@@ -208,12 +208,12 @@ a.button:hover{
 	text-decoration: solid underline oklch(1 0 0 /.5) .5px;
 	text-underline-offset: 6px;
 	color: var(--white);
-	transition: color .6s ease;
+	transition: color .6s ease, text-decoration .6s ease;
 }
 
 a.classic-link:hover{
 	color: var(--hover);
 	text-decoration: solid underline oklch(0.71 0.3437 332.12 /.5) .5px;
 	cursor: pointer;
-	transition: color 0s ease;
+	transition: color 0s ease, text-decoration 0s ease;
 }
