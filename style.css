@@ -1,0 +1,216 @@
+:root {
+	--black: oklch(0 0 0);
+	--white: oklch(1 0 0);
+	--green: #8BF904;
+	--lite-black: #101112;
+	--grey: #D0D6DC;
+	--hover: oklch(0.71 0.3437 332.12);
+}
+
+* {
+	box-sizing: border-box
+}
+
+body {
+	color: var(--white);
+	font-family: "Commissioner";
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 27px;
+	background-color: var(--black);
+	width: 100%;
+	margin: 0;
+}
+
+main{
+	width: 1320px;
+	margin: 30px auto 30px auto;
+}
+
+p{
+	margin: 0 0 15px 0;
+}
+
+figure{
+	margin: 0;
+}
+
+figcaption{
+	margin-top: 10px;
+	font-size: 16px;
+	color: var(--grey);
+}
+
+.before-points{
+	margin: 0 0 5px 0;
+}
+
+ul{
+	margin: 0 0 15px 0;
+}
+
+h1{
+	font-size: 252px;
+	font-weight: 700;
+	text-align: center;
+	line-height: .6em;
+}
+
+h2{
+	font-size: 80px;
+	font-weight: 700;
+	line-height: .9em;
+	margin: 0 0 30px 0;
+}
+
+h3{
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.points{
+	font-size: 32px;
+	margin: 0 0 20px 0;
+}
+
+section{
+	margin: 0 0 80px 0;
+}
+
+.real-invise{
+	display: grid;
+	grid-template-columns: 460px auto;
+	gap: 60px;
+}
+
+.deer-img, .how-it-img, .shirt-img, .dont-lose-img{
+	width: 100%;
+}
+
+.product-card{
+	width: 860px;
+	position: absolute;
+	right: -150px;
+	top: -60px;
+}
+
+.mountains-photo{
+	background-image: url("images/mountain.jpg");
+	background-repeat: no-repeat;
+  	background-position: center;
+  	background-size: cover;
+}
+
+.start-image{
+	background-image: url("images/start.jpg");
+	background-repeat: no-repeat;
+  	background-position: center;
+  	background-size: cover;
+  	height: 1330px;
+  	padding-top: 375px;
+}
+
+.how-it-works{
+	display: grid;
+	grid-template-columns: auto 520px;
+	gap: 60px;
+}
+
+.shirt-works-too{
+	display: grid;
+	grid-template-columns: 460px auto;
+	gap: 60px;
+}
+
+.dont-lose{
+	display: grid;
+	grid-template-columns: auto 520px;
+	gap: 60px;
+}
+
+.mountains-photo{
+	padding: 60px 130px 500px 130px;
+}
+
+.faq{
+	width: 700px;
+	margin: 0 auto 80px auto;
+}
+
+.faq h2{
+	text-align: center;
+}
+
+.faq h3{
+	text-align: center;
+	margin: 0;
+	line-height: 39px;
+}
+
+.faq p{
+	text-align: center;
+}
+
+.please-buy-me{
+	background-color: var(--lite-black);
+	padding: 80px 60px 90px 60px;
+	border-radius: 20px;
+	margin-top: 150px;
+	margin-bottom: 300px;
+	position: relative;
+}
+
+.please-buy-me div{
+	margin: 0 0 50px 0;
+}
+
+.button{
+	background-color: var(--green);
+	padding: 25px 44px 32px 44px;
+
+	color: var(--black);
+	font-size: 40px;
+	font-weight: 500;
+	border-radius: 20px;
+
+	display: inline-block;
+
+	text-decoration: none;
+}
+
+a.button:hover{
+	background-color: var(--hover);
+	color: var(--white);
+}
+
+.footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.footer .links{
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+}
+
+.icon{
+	width: 24px;
+	height: 24px;
+	border-radius: 5px;
+	transform: translateY(15%);
+	margin-left: 4px;
+}
+
+.classic-link{
+	text-decoration: solid underline oklch(1 0 0 /.5) .5px;
+	text-underline-offset: 6px;
+	color: var(--white);
+}
+
+a.classic-link:hover{
+	color: var(--hover);
+	text-decoration: solid underline oklch(0.71 0.3437 332.12 /.5) .5px;
+	cursor: pointer;
+}
