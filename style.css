@@ -20,11 +20,17 @@ body {
 	background-color: var(--black);
 	width: 100%;
 	margin: 0;
+
+	@media screen and (max-width: 768px) {
+		font-size: 18px;
+	}
 }
 
 main{
-	width: 1320px;
-	margin: 30px auto 30px auto;
+	width: 100%;
+/*	margin: 30px auto 30px auto;*/
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 p{
@@ -36,9 +42,15 @@ figure{
 }
 
 figcaption{
-	margin-top: 10px;
+	margin-top: 5px;
 	font-size: 16px;
 	color: var(--grey);
+
+	@media screen and (max-width: 768px) {
+		margin-top: 8px;
+		font-size: 14px;
+		line-height: 20px;
+	}
 }
 
 .before-points{
@@ -50,17 +62,28 @@ ul{
 }
 
 h1{
-	font-size: 252px;
+/*	font-size: 252px;*/
+	font-size: 17.2vw;
 	font-weight: 700;
 	text-align: center;
 	line-height: .6em;
+	margin: 0;
+
+	@media screen and (min-width: 1470px) {
+		font-size: 252px;
+	}
 }
 
 h2{
-	font-size: 80px;
+	font-size: 75px;
 	font-weight: 700;
 	line-height: .9em;
 	margin: 0 0 30px 0;
+
+	@media screen and (max-width: 768px) {
+		font-size: 30px;
+		margin-bottom: 15px;
+	}
 }
 
 h3{
@@ -71,27 +94,60 @@ h3{
 .points{
 	font-size: 32px;
 	margin: 0 0 20px 0;
+
+	@media screen and (max-width: 768px) {
+		font-size: 18px;
+		margin-bottom: 8px;
+		text-align: center;
+	}
 }
 
 section{
-	margin: 0 0 80px 0;
+	margin: 0 auto 80px auto;
+	width: 90%;
+	max-width: 1320px;
+
+	@media screen and (max-width: 768px) {
+		width: 96%;
+		margin-bottom: 48px;
+	}
 }
 
 .real-invise{
 	display: grid;
-	grid-template-columns: 460px auto;
+	grid-template-columns: 35fr 65fr;
 	gap: 60px;
+
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		gap: 10px;
+	}
 }
 
 .deer-img, .how-it-img, .shirt-img, .dont-lose-img{
 	width: 100%;
 }
 
+.product-card-container{
+	width: 50%;
+	overflow: hidden;
+	position: absolute;
+	transform: translateY(-110%) translateX(94%);
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		transform: translateY(-205%) translateX(0%);
+	}
+}
+
 .product-card{
 	width: 860px;
-	position: absolute;
-	right: -150px;
-	top: -60px;
+	position: relative;
+	overflow: hidden;
+	@media screen and (max-width: 768px) {
+		width: 450px;
+		transform: translateX(5%);
+	}
 }
 
 .mountains-photo{
@@ -99,6 +155,21 @@ section{
 	background-repeat: no-repeat;
   	background-position: center;
   	background-size: cover;
+  	padding: 60px 0 500px 0;
+
+  	@media screen and (max-width: 768px) {
+  		padding: 30px 0 450px 0;
+  	}
+}
+
+.mountains-photo section{
+	max-width: 1040px;
+}
+
+#start-figure{
+	@media screen and (max-width: 768px) {
+		padding-top:100px
+	}
 }
 
 .start-image{
@@ -107,48 +178,147 @@ section{
   	background-position: center;
   	background-size: cover;
   	height: 1330px;
-  	padding-top: 375px;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: flex-end;
+  	padding-bottom: 450px;
+
+  	@media screen and (max-width: 768px) {
+  		justify-content: flex-start;
+		height: 700px;
+		h1{
+			position: absolute;
+			transform: translateY(-100px);
+		}
+	}
+}
+
+.start-image .arrow{
+	position: relative;
+	left: 40%;
+	bottom: -325px;
+	width: 200px;
+
+	figcaption{
+		color: #628898;
+		position: relative;
+		left: 35px;
+		top: -15px;
+	}
+
+	@media screen and (max-width: 768px) {
+		bottom: -595px;
+	}
+
+	@media screen and (max-width: 400px) {
+		left: 35%;
+	}
+}
+
+.mountains-photo .arrow{
+	position: relative;
+	right: -60%;
+	bottom: -10px;
+	width: 200px;
+
+	figcaption{
+		color: #B3D9FF;
+		position: relative;
+		left: 25px;
+		top: -65px;
+	}
+
+	@media screen and (max-width: 1050px) {
+		display: none;
+	}
 }
 
 .how-it-works{
 	display: grid;
-	grid-template-columns: auto 520px;
+	grid-template-columns: 60fr 40fr;
 	gap: 60px;
+
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		gap: 10px;
+
+		.left {
+			order: 2;
+			margin-top: -20px;
+		}
+		.right {
+			order: 1;
+		}
+	}
 }
 
 .shirt-works-too{
 	display: grid;
-	grid-template-columns: 460px auto;
+	grid-template-columns: 35fr 65fr;
 	gap: 60px;
+
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		gap: 10px;
+
+		.right{
+			margin-top:10px;
+		}
+	}
 }
 
 .dont-lose{
 	display: grid;
-	grid-template-columns: auto 520px;
+	grid-template-columns: 60fr 40fr;
 	gap: 60px;
-}
 
-.mountains-photo{
-	padding: 60px 130px 500px 130px;
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		gap: 10px;
+
+		.left {
+			order: 2;
+		}
+		.right {
+			order: 1;
+		}
+	}
 }
 
 .faq{
 	width: 700px;
 	margin: 0 auto 80px auto;
+	@media screen and (max-width: 768px) {
+		width: 96%
+	}
 }
 
 .faq h2{
 	text-align: center;
+	@media screen and (max-width: 768px) {
+		text-align: left;
+	}
 }
 
 .faq h3{
 	text-align: center;
 	margin: 0;
 	line-height: 39px;
+
+	@media screen and (max-width: 768px) {
+		font-size: 22px;
+		text-align: left;
+	}
 }
 
 .faq p{
 	text-align: center;
+	@media screen and (max-width: 768px) {
+		text-align: left;
+	}
 }
 
 .please-buy-me{
@@ -158,10 +328,27 @@ section{
 	margin-top: 150px;
 	margin-bottom: 300px;
 	position: relative;
+
+	@media screen and (max-width: 768px) {
+		margin-top: 275px;
+		padding: 250px 0 45px 0;
+		margin-bottom: 120px;
+
+		div #class-heading{
+			text-align: center;
+		}
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .please-buy-me div{
-	margin: 0 0 50px 0;
+	margin: 0 0 80px 0;
+	@media screen and (max-width: 768px) {
+		margin-bottom: 30px;
+	}
 }
 
 .button{
@@ -176,6 +363,10 @@ section{
 	display: inline-block;
 	text-decoration: none;
 	transition: background-color .6s ease, color .6s ease;
+
+	@media screen and (max-width: 768px) {
+		font-size: 30px;
+	}
 }
 
 a.button:hover{
@@ -188,12 +379,21 @@ a.button:hover{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		p{
+			margin: 0;
+		}
+	}
 }
 
 .footer .links{
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
+	@media screen and (max-width: 768px) {
+		gap: 15px
+	}
 }
 
 .icon{
@@ -202,6 +402,9 @@ a.button:hover{
 	border-radius: 5px;
 	transform: translateY(15%);
 	margin-left: 4px;
+	@media screen and (max-width: 768px) {
+		transform: translateY(25%);
+	}
 }
 
 .classic-link{
@@ -216,4 +419,14 @@ a.classic-link:hover{
 	text-decoration: solid underline oklch(0.71 0.3437 332.12 /.5) .5px;
 	cursor: pointer;
 	transition: color 0s ease, text-decoration 0s ease;
+}
+
+ul{
+	padding: 0;
+}
+
+ul li{
+	list-style-type: none;
+	margin-bottom: 10px;
+	margin-left: 20px;
 }
