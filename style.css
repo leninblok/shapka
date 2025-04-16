@@ -408,17 +408,18 @@ a.button:hover{
 }
 
 .classic-link{
-	text-decoration: solid underline oklch(1 0 0 /.5) .5px;
-	text-underline-offset: 6px;
+	text-decoration: none;
+	border-bottom: 0.5px solid oklch(1 0 0 / 0.5);
+	padding-bottom: .6px;
 	color: var(--white);
-	transition: color .6s ease, text-decoration .6s ease;
+	transition: color .6s ease, border-bottom .6s ease;
 }
 
 a.classic-link:hover{
 	color: var(--hover);
-	text-decoration: solid underline oklch(0.71 0.3437 332.12 /.5) .5px;
+	border-bottom:  0.5px solid oklch(0.71 0.3437 332.12 /.5);
 	cursor: pointer;
-	transition: color 0s ease, text-decoration 0s ease;
+	transition: color 0s ease, border-bottom 0s ease;
 }
 
 ul{
@@ -429,4 +430,8 @@ ul li{
 	list-style-type: none;
 	margin-bottom: 10px;
 	margin-left: 20px;
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 5px;
+	}
 }
