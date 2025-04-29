@@ -31,6 +31,9 @@ let shirt3 = document.querySelector('.shirt3')
 let shirt1 = document.querySelector('.shirt1')
 let img = document.querySelectorAll('.parallax-img')
 let howvideo = document.querySelector('.how-it-video')
+howvideo.muted = true;
+howvideo.playsInline = true;
+howvideo.preload = 'auto';
 
 document.addEventListener('scroll', function(event){
   parallax(productCard, 10, -1)
