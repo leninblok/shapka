@@ -3,14 +3,10 @@
   }
 
   window.addEventListener('load', () => {
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
         if (!location.hash) window.scrollTo(0, 0);
         const main = document.querySelector('main');
         main.style.opacity = '1';
         main.style.transform = 'translateY(0)';
-      });
-    });
   });
 
 
