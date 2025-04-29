@@ -132,14 +132,14 @@ section{
 	width: 100%;
 }
 
-.deer-container{
+.parallax-container{
 	width: 100%;
 	aspect-ratio: 100 / 67.5;
 	overflow: hidden;
 	position: relative;
 }
 
-.deer-img{
+.parallax-img{
 	transform: translateY(-30%);
 	position: absolute;
 }
