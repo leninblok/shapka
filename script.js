@@ -2,7 +2,6 @@
     history.scrollRestoration = 'manual';
   }
 
-  // 2. После полной загрузки и layout-а — запускаем анимацию
   window.addEventListener('load', () => {
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
@@ -13,7 +12,6 @@
       });
     });
   });
-
 
 
 let heading= document.querySelector('#class-heading')
