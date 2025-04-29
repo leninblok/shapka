@@ -30,6 +30,7 @@ let productCard = document.querySelector('.product-card')
 let shirt3 = document.querySelector('.shirt3')
 let shirt1 = document.querySelector('.shirt1')
 let img = document.querySelectorAll('.parallax-img')
+let howvideo = document.querySelector('.how-it-video')
 
 document.addEventListener('scroll', function(event){
   parallax(productCard, 10, -1)
@@ -37,6 +38,7 @@ document.addEventListener('scroll', function(event){
   parallax(shirt1,20,-1)
   for(let i=0;i<img.length;i++){
     parallax(img[i],17.5,-1)}
+  scrollvideo(howvideo)
 })
 
 function parallax(element, offset, direction){
@@ -44,4 +46,11 @@ function parallax(element, offset, direction){
   let progress = 1 - rect.top / window.innerHeight;
   progress = Math.max(0, Math.min(2, progress));
   element.style.top = progress*offset*direction + '%'
+}
+
+function scrollvideo(element) {
+  let rect = element.getBoundingClientRect()
+  let progress = (window.innerHeight - rect.y)/(window.innerHeight+rect.height)
+  element.currentTime = progress * element.duration
+  console.log(element.currentTime)
 }
