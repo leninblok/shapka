@@ -1,3 +1,21 @@
+ if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // 2. После полной загрузки и layout-а — запускаем анимацию
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (!location.hash) window.scrollTo(0, 0);
+        const main = document.querySelector('main');
+        main.style.opacity = '1';
+        main.style.transform = 'translateY(0)';
+      });
+    });
+  });
+
+
+
 let heading= document.querySelector('#class-heading')
 const mobileText = heading.innerHTML.replace(/<br\s*\/?>/gi, '');
 const desktopText = heading.innerHTML
