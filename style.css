@@ -125,18 +125,63 @@ section{
 	}
 }
 
-.deer-img, .how-it-img, .shirt-img, .dont-lose-img{
+.deer-img, .how-it-img, .dont-lose-img{
 	width: 100%;
+}
+
+.deer-container{
+	width: 100%;
+	aspect-ratio: 100 / 67.5;
+	overflow: hidden;
+	position: relative;
+}
+
+.deer-img{
+	transform: translateY(-30%);
+	position: absolute;
+}
+
+.shirt-works-too .right{
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 75%;
+	transform: translateY(-10%);
+
+	@media screen and (max-width: 768px) {
+		transform: translateY(0%);
+	}
+}
+
+.shirt-img{
+	width: 65%;
+	position: absolute;
+	filter: drop-shadow(0 21px 16px rgba(0, 0, 0, .18));
+}
+
+.shirt1{
+	left: 35%;
+	transform: translateY(46%);
+}
+
+.shirt2{
+	left: 17.5%;
+	top: 15%;
+}
+
+.shirt3{
 }
 
 .product-card-container{
 	width: 50%;
+	height: 1110px;
 	overflow: hidden;
 	position: absolute;
-	transform: translateY(-110%) translateX(94%);
+	transform: translateY(-110%) translateX(100%);
 	@media screen and (max-width: 768px) {
 		width: 100%;
-		transform: translateY(-205%) translateX(0%);
+		height: 750px;
+		transform: translateY(-135%) translateX(0%);
 	}
 }
 
@@ -144,9 +189,10 @@ section{
 	width: 860px;
 	position: relative;
 	overflow: hidden;
+	transform: translateY(150px);
 	@media screen and (max-width: 768px) {
 		width: 450px;
-		transform: translateX(5%);
+		transform: translateX(10%) translateY(100px);
 	}
 }
 
@@ -376,6 +422,7 @@ a.button:hover{
 }
 
 .footer{
+	margin-bottom: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
