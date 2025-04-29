@@ -37,9 +37,8 @@ document.addEventListener('scroll', function(event){
   parallax(shirt3,20,1)
   parallax(shirt1,20,-1)
   for(let i=0;i<img.length;i++){
-    parallax(img[i],17.5,-1)}
-  
-  scrollvideo(howvideo)
+    parallax(img[i],17.5,-1)} 
+  if(howvideo){scrollvideo(howvideo)}
 })
 
 function parallax(element, offset, direction){
