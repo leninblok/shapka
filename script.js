@@ -6,7 +6,7 @@ let img = document.querySelectorAll('.parallax-img')
 let howvideo = document.querySelector('.how-it-video')
 let howimg = document.querySelector('.how-it-img')
 
-let deer = document.querySelector('.deer-img')
+let deer = document.querySelector('.deer-open')
 
  if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
@@ -63,9 +63,9 @@ function scrollvideo(element) {
 }
 
 window.setInterval(function(){
-  deer.src='images/deerclose.jpg';
+  deer.style.display='none'
 }, 3000);
 
 window.setInterval(function(){
-  deer.src='images/deeropen.jpg';
+  deer.style.display='block'
 }, 3100);
