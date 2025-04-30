@@ -1,3 +1,13 @@
+ 
+let productCard = document.querySelector('.product-card')
+let shirt3 = document.querySelector('.shirt3')
+let shirt1 = document.querySelector('.shirt1')
+let img = document.querySelectorAll('.parallax-img')
+let howvideo = document.querySelector('.how-it-video')
+let howimg = document.querySelector('.how-it-img')
+
+let deer = document.querySelector('.deer-img')
+
  if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
@@ -21,16 +31,14 @@ window.addEventListener('resize', checkBreakpoint);
 function checkBreakpoint() {
   if (window.innerWidth < 768) {
 	heading.innerHTML=mobileText
+  howvideo.style.display = "none";
+  howimg.style.display = "block";
   } else {
   	heading.innerHTML=desktopText
+    howvideo.style.display = "block";
+    howimg.style.display = "none";
   }
 }
-
-let productCard = document.querySelector('.product-card')
-let shirt3 = document.querySelector('.shirt3')
-let shirt1 = document.querySelector('.shirt1')
-let img = document.querySelectorAll('.parallax-img')
-let howvideo = document.querySelector('.how-it-video')
 
 document.addEventListener('scroll', function(event){
   parallax(productCard, 10, -1)
@@ -53,3 +61,11 @@ function scrollvideo(element) {
   let progress = (window.innerHeight - rect.y)/(window.innerHeight+rect.height)
   element.currentTime = progress * element.duration
 }
+
+window.setInterval(function(){
+  deer.src='images/deerclose.jpg';
+}, 3000);
+
+window.setInterval(function(){
+  deer.src='images/deeropen.jpg';
+}, 3100);
