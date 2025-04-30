@@ -52,5 +52,4 @@ function scrollvideo(element) {
   let rect = element.getBoundingClientRect()
   let progress = (window.innerHeight - rect.y)/(window.innerHeight+rect.height)
   element.currentTime = progress * element.duration
-  console.log(element.currentTime)
 }
