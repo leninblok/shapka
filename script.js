@@ -62,10 +62,5 @@ function scrollvideo(element) {
   element.currentTime = progress * element.duration
 }
 
-window.setInterval(function(){
-  deer.style.display='none'
-}, 3000);
-
-window.setInterval(function(){
-  deer.style.display='block'
-}, 3100);
+gsap.timeline({repeat:-1}).to(deer,{duration:0, display:'none'},'+=2.5')
+                          .to(deer,{duration:0, display:'block'},'+=0.15')
