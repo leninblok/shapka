@@ -8,18 +8,6 @@ let howimg = document.querySelector('.how-it-img')
 
 let deer = document.querySelector('.deer-open')
 
- if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-
-  window.addEventListener('load', () => {
-        if (!location.hash) window.scrollTo(0, 0);
-        const main = document.querySelector('main');
-        main.style.opacity = '1';
-        main.style.transform = 'translateY(0)';
-  });
-
-
 let heading= document.querySelector('#class-heading')
 const mobileText = heading.innerHTML.replace(/<br\s*\/?>/gi, '');
 const desktopText = heading.innerHTML
@@ -64,3 +52,13 @@ function scrollvideo(element) {
 
 gsap.timeline({repeat:-1}).to(deer,{duration:0, display:'none'},'+=2.5')
                           .to(deer,{duration:0, display:'block'},'+=0.15')
+
+document.querySelectorAll('section').forEach(section => {
+  gsap.from(section, {
+    scrollTrigger: section,
+    duration: 1,
+    y: 100,
+    opacity: 0,
+    ease: 'power2.out'
+  });
+});
